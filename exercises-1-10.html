@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercises 1 - 10!</title>
+</head>
+<body>
+    <a href="index.html">Go back to main page</a>
+    <h1>Exercise 1</h1>
+    <div class="exercise">
+        <div class="exercise-description">
+            <p><strong>Write a Javascript program to display the current day and time</strong></p>
+        </div>
+        <div class="solution">
+            <p>Today is: <span id="e1"></span></p>
+            <p>Current time is: <span id=e1-time></span></p>
+        </div>
+        <script>
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let d = new Date();
+            let day = days[d.getDay()];
+            let time1 = d.getHours();
+            let time2 = d.getMinutes();
+            let time3 = d.getSeconds();
+            let time = time1 + " : " + time2 + " : " + time3;
+            document.getElementById("e1").innerHTML = day;
+            document.getElementById("e1-time").innerHTML = time;
+        </script>
+    </div>
+</body>
+</html>
