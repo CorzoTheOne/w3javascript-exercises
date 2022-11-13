@@ -61,5 +61,36 @@
         </script>
         </div>
     </div>
+    <h1>Exercise 4</h1>
+    <div class="exercise">
+        <div class="exercise-description">
+            <p><strong>Write a JS program to find the area of a triangle!</strong></p>
+        </div>
+        <div class="solution">
+                <label for="firstnumber">First Number:</label>
+                <input type="text" id="firstnumber" name="firstnumber">
+                </br>
+                <label for="secondnumber">Second Number:</label>
+                <input type="text" id="secondnumber" name="secondnumber">
+                </br>
+                <label for="thirdnumber">Third Number:</label>
+                <input type="text" id="thirdnumber" name="thirdnumber">
+                </br>
+                <button id="e4-button" type="button" onclick="calculateArea()">Calculate!</button>
+                </br>
+                <p>Result is: <span id="e4-solution"></span></p>
+            <script>                                                         
+            function calculateArea() {
+                let first = document.getElementById('firstnumber').value;
+                let second = document.getElementById('secondnumber').value;
+                let third = document.getElementById('thirdnumber').value;
+                let s = (parseInt(first) + parseInt(second) + parseInt(third))/2;
+                let area = Math.sqrt(s*((s-first)*(s-second)*(s-third)));
+                document.getElementById('e4-solution').innerHTML = area;
+                }
+            </script>
+            
+        </div>
+    </div>
 </body>
 </html>
