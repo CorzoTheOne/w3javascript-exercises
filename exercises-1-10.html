@@ -13,10 +13,11 @@
         </div>
         <div class="solution">
             <p>Today is: <span id="e1"></span></p>
-            <p>Current time is: <span id=e1-time></span></p>
+            <p>Current time is: <span id="e1-time"></span></p>
         </div>
         <script>
             const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             let d = new Date();
             let day = days[d.getDay()];
             let time1 = d.getHours();
@@ -47,7 +48,18 @@
         <div class="exercise-description">
             <p><strong>Write a Javascript program to get the current date</strong></p>
         </div>
-        <div class="solution"
+        <div class="solution">
+            <p>Month/Date/Year = <span id="e3-date"></span></p>
+        </div>
+        <script>
+            let d2 = new Date();
+            let month = d2.getMonth() +1 ;
+            let date = d2.getDate();
+            let year = d2.getFullYear();
+            let formattedDate = month + "-" + date + "-" + year;
+            document.getElementById("e3-date").innerHTML = formattedDate;
+        </script>
+        </div>
     </div>
 </body>
 </html>
